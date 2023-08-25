@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--
+	meta section is to help make the website responsive
+	-->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	
+	<title>AJ Moves - Your Local Moving Company</title>
+	
+	<!--
+	link the css style here
+	-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!--
+	link the font styles and icons we are using
+	-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/4b56ea404f.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	
+	<!----- Main Page Section ----->
+	<section class="sub-header2">
+		<nav>
+			<a href="index"><img src="AJ Moving Company Images/Moving Company Logo 2.png" alt="AJ Moves Logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i> <!-- resized page hide navigation menu icon -->
+				<ul>
+					<li><a href="index">HOME</a></li>
+					<li><a href="aboutus">ABOUT US</a></li>
+					<li><a href="costcalculator">COST CALCULATOR</a></li>
+					<li><a href="contactus">CONTACT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i> <!-- resized page show navigation menu icon -->
+		</nav>
+		
+	<!--
+	main page text display text
+	-->
+	<h1>Cost Calculator</h1>
+	</section>
+	
+	<!----- Cost Calculator Section ----->
+    <section class="cost-calculator">
+		
+		<h1>How Much Will It Cost For Us To Get From Point A to Point B?</h1>
+		<p>This calculator can be used to get an idea how much driving from one place to another might cost. This is based off of 10 miles per gallon. You can do it yourself with the formula Total Mile Traveled / Miles Per Gallon = Number Gallons Needed. Then, Number Gallons Needed * Price Per Gallon = Total Price for drive.</p>
+		<form>
+		<div class="row">
+			<div class="calculator-col">
+				<h3>Total Miles Traveled</h3>
+				<p><input type="number" id="milesTraveled"/></p>
+			</div>
+			
+			<div class="calculator-col">
+				<h3>Price Per Gallon</h3>
+				<p><input type="number" id="priceGallon"/></p>
+			</div>
+			<div class="calculator-col">
+				<h3>Total Cost</h3>
+                <p><span id="totalPrice"></span></p>
+                <input type="button" onClick="calculateTotal()" Value="Go" />
+			</div>
+		</div>
+        </form>
+	</section>
+    
+	<!----- Footer Section ----->
+	<section class="footer">
+		<p>Oklahoma City, OK area based moving company. Contact us for more information.</p>
+		
+		<!--
+		we can add some social media links to these icons later maybe?
+
+		<div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-linkedin"></i>
+		</div>
+
+		-->
+		<p>Made with <i class="fa fa-heart-o"></i> by S. Rojo</p>
+	</section>
+	
+	
+	
+	<!----- Java Script ----->
+	<script>
+		
+		/*
+		set it so that the nav bar in the small screen works 
+		when you click the buttons
+		*/
+		var navLinks = document.getElementById("navLinks");
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+        
+        /*
+        cost calculator formula
+        */
+        function calculateTotal()
+        {
+            milesGallon = 10;
+            milesTraveled = document.getElementById("milesTraveled").value;
+            priceGallon = document.getElementById("priceGallon").value;
+            
+            // get #gallons needed
+            gallonsNeeded = milesTraveled / milesGallon;
+            
+            // get total price
+            totalPrice = gallonsNeeded * priceGallon;
+            
+            // display results with only 2 decimal places
+            document.getElementById("totalPrice").innerHTML = ("$" + totalPrice.toFixed(2));
+        }
+        
+	</script>
+	
+</body>
+</html>

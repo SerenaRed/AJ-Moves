@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--
+	meta section is to help make the website responsive
+	-->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	
+	<title>AJ Moves - Your Local Moving Company</title>
+	
+	<!--
+	link the css style here
+	-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!--
+	link the font styles and icons we are using
+	-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/4b56ea404f.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	
+	<!----- Main Page Section ----->
+	<section class="sub-header3">
+		<nav>
+			<a href="index"><img src="AJ Moving Company Images/Moving Company Logo 2.png" alt="AJ Moves Logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i> <!-- resized page hide navigation menu icon -->
+				<ul>
+					<li><a href="index">HOME</a></li>
+					<li><a href="aboutus">ABOUT US</a></li>
+					<li><a href="costcalculator">COST CALCULATOR</a></li>
+					<li><a href="contactus">CONTACT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i> <!-- resized page show navigation menu icon -->
+		</nav>
+		
+	<!--
+	main page text display text
+	-->
+	<h1>Contact Us</h1>
+	</section>
+	
+	<!----- Contact Us Section ----->
+    <div class="container">
+        <form action="https://formsubmit.co/serena-rojo@raider.rose.edu" method="POST" />
+            
+            <label for="email">Email Address</label>
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Message us to set up an appointment or ask a question!" style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+            
+            <input type="hidden" name="_next" value="http://www.ajmoves.com/">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting AJ Moves! We will respond to your email shortly.">
+        </form>
+    </div>
+    <div class="contactUsIcons">
+			<i class="fa fa-phone"></i><p>(405)501-2295</p>
+            <i class="fa fa-envelope"></i><p>joshua.rojo2022@gmail.com</p>
+    </div>
+	
+	<!----- Footer Section ----->
+	<section class="footer">
+		<p>Oklahoma City, OK area based moving company. Contact us for more information.</p>
+		
+		<!--
+		we can add some social media links to these icons later maybe?
+
+		<div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-linkedin"></i>
+		</div>
+
+		-->
+		<p>Made with <i class="fa fa-heart-o"></i> by S. Rojo</p>
+	</section>
+	
+	
+	
+	<!----- Java Script ----->
+	<script>
+		
+		/*
+		set it so that the nav bar in the small screen works 
+		when you click the buttons
+		*/
+		var navLinks = document.getElementById("navLinks");
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--
+	meta section is to help make the website responsive
+	-->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	
+	<title>AJ Moves - Your Local Moving Company</title>
+	
+	<!--
+	link the css style here
+	-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!--
+	link the font styles and icons we are using
+	-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/4b56ea404f.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	
+	<!----- Header Section ----->
+	<section class="sub-header1">
+		<nav>
+			<a href="index"><img src="AJ Moving Company Images/Moving Company Logo 2.png" alt="AJ Moves Logo"></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i> <!-- resized page hide navigation menu icon -->
+				<ul>
+					<li><a href="index">HOME</a></li>
+					<li><a href="aboutus">ABOUT US</a></li>
+                    <li><a href="costcalculator">COST CALCULATOR</a></li>
+					<li><a href="contactus">CONTACT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i> <!-- resized page show navigation menu icon -->
+		</nav>
+		
+	<!--
+	header text display text
+	-->
+	<h1>About Us</h1>
+	</section>
+	
+	<!----- Our Services Section ----->
+	<section class="our-services">
+		
+		<h1>Our Services</h1>
+		<p>AJ Moves is here to help you with getting everything you want to your new home.</p>
+		
+		<div class="row">
+			<div class="services-col">
+				<h3>Moving</h3>
+				<p>We can move your things with our crew from one home to another!</p>
+			</div>
+			
+			<div class="services-col">
+				<h3>Home Staging</h3>
+				<p>Staging a home? Moving around furniture? We got you!</p>
+			</div>
+			
+			<div class="services-col">
+				<h3>Packing</h3>
+				<p>Do you need help packing? We can do that!</p>
+			</div>
+		</div>
+	</section>
+	
+	<!----- About Us Section ----->
+	<section class="about-us">
+		<div class="row">
+			<div class="about-col">
+				<h1>About AJ Moves</h1>
+				<p>AJ Moves was created by a bunch of friends that wanted to help people all over the OKC area get from point A to point B. Contact us today to get moving!</p>
+				<a href="contactus" class="hero-btn red-btn">Set Up A Meeting!</a>
+			</div>
+			
+			<!-- about us image -->
+			<div class="about-col">
+				<img alt="A Dog Sitting In A Box" src="AJ Moving Company Images/testMedium.png">
+			</div>
+		</div>
+	</section>
+	
+	<!----- Reviews Section ----->
+	<section class="reviews">
+		<h1>What Our Customers Say</h1>
+		<p>We can put some text here later.</p>
+		
+		<div class="row">
+			<div class="reviews-col">
+				<img src="AJ Moving Company Images/blankPFP.png" alt="A Blank User Img">
+				<div>
+					<p>We can put some text here later.</p>
+					<h3>Customer1 Name</h3>
+					
+					<!-- this is the star review. will change as reviews change -->
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+			</div>
+			
+			<div class="reviews-col">
+				<img src="AJ Moving Company Images/blankPFP.png" alt="A Blank User Img">
+				<div>
+					<p>We can put some text here later.</p>
+					<h3>Customer2 Name</h3>
+					
+					<!-- this is the star review. will change as reviews change -->
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half-o"></i>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!----- Footer Section ----->
+	<section class="footer">
+		<p>Oklahoma City, OK area based moving company. Contact us for more information.</p>
+		
+		<!--
+		we can add some social media links to these icons later maybe?
+
+		<div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-instagram"></i>
+			<i class="fa fa-linkedin"></i>
+		</div>
+
+		-->
+		<p>Made with <i class="fa fa-heart-o"></i> by S. Rojo</p>
+	</section>
+	
+	
+	
+	<!----- Java Script ----->
+	<script>
+		
+		/*
+		set it so that the nav bar in the small screen works 
+		when you click the buttons
+		*/
+		var navLinks = document.getElementById("navLinks");
+		function showMenu(){
+			navLinks.style.right = "0";
+		}
+		function hideMenu(){
+			navLinks.style.right = "-200px";
+		}
+	</script>
+	
+</body>
+</html>
